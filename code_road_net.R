@@ -74,12 +74,10 @@ mean(a5$`mean(deg_V2)`)
 mean(a3$n)
 
 #Q7
-#Q7
+
 N <- sum(deg_dist$n)
-avg <- 5.26
+avg <- 2.83
 
-nrow(deg_dist)
-
-deg_dist$expected <- N*dpois(deg_dist$degree, avg)
+deg_dist$expected <- N*dpois(deg_dist$deg, avg)
 deg_dist$error <- (deg_dist$n - deg_dist$expected)^2 / deg_dist$expected
 chisquared <- sum(deg_dist$error)
